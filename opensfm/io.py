@@ -835,7 +835,7 @@ def _read_gcp_list_lines(
 ) -> List[pymap.GroundControlPoint]:
     points = {}
     for line in lines:
-        words = line.split(None, 5)
+        words = line.split(None)
         easting, northing, alt, pixel_x, pixel_y = map(float, words[:5])
         key = (easting, northing, alt)
 
